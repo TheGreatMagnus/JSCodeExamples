@@ -11,11 +11,11 @@
 
 // So if you were told someone were 1,000,000,000 seconds old,
 // you should be able to say that they're 31.69 Earth-years old.
-var age_in_second = x;
 
-31557600 seconds = 0.2408467 mercury years
-31557600 seconds = 1 earth year
-second/earth_seconds * plant_years
+
+// 31557600 seconds = 0.2408467 mercury years
+// 31557600 seconds = 1 earth year
+// second/earth_seconds * plant_years
 
 function ages_on_planet(seconds) {
   var seconds = seconds;
