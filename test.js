@@ -5,15 +5,19 @@
 // your code goes here
 //12! = 12*11*10*9...
 
-for (var x=12; x >= 1; x=x-1){
-  var fact = (x + "!" + " = " + x);
-  var product = x;
-    for (var y=x-1; y >=1; y= y-1) {
-      fact += ("*" +y);
-      product *=y;
-    }
-    console.log(fact + "="+product)
-  }
+// for (var x=12; x >= 1; x=x-1){
+//   var fact = (x + "!" + " = " + x);
+//   var product = x;
+//     for (var y=x-1; y >=1; y= y-1) {
+//       fact += ("*" +y);
+//       product *=y;
+//     }
+//     console.log(fact + "="+product)
+//   }
+
+for (var x = 9; x > 1; --x) {
+   console.log("Hello " + x);
+}
 
 
 // }
