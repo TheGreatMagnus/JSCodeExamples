@@ -1,8 +1,12 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <head></head>
 <style>
     #guess {
         width: 90px;
+    }
+
+    #foo {
+        border: 2px solid pink;
     }
 </style>
 <title></title>
@@ -11,9 +15,72 @@
     <h1>Guessing game</h1>
     <p>Please guess a number between 1 and 100.</p>
     <input type="text" name="guess" id="guess_id"/>
-    <button onclick="myFunction()">Click me</button>
-    <p id="demo"></p>
+    <button id="foo" onclick="guessNumber()">check!</button>
+    <p id="content">Answer: </p>
+    <p id="your_guesses"></p>
+    <p id="correct_answer"></p>
+
+<script>
+var rightNumber = Math.floor(Math.random() * 100);
+// Use Math.random() to generate a random decimal.
+// Multiply that random decimal by 20.
+// Use another function, Math.floor() to round the number down to its nearest whole number.
+
+var guessArray = [];
+
+//clearing the input
+function clearinput() {
+    document.getElementById("guess_id").value = "" ;
+}
+
+//ending the game
+function endGame() {
+    alert("Sorry! You're out of guesses! Game Over!");
+    clearinput();
+    guessArray = [];
+    document.getElementById("correct_answer").innerHTML =
+    "The correct answer was: " + rightNumber;
+
+}
+
+//checking if the guess is correct
+function guessNumber() {
+	var guess = document.getElementById("guess_id").value;
+	if (guess != null) {
+        if (guess < rightNumber) {
+            alert("Your guess is too low!");
+             guessArray.push(guess);
+                    if (guessArray.length === 5) {
+                        endGame();
+                    }
+             clearinput();
+
+            } else if (guess > rightNumber) {
+            alert("Your guess is too high!");
+             guessArray.push(guess);
+                if (guessArray.length === 5) {
+                        endGame();
+                    }
+             clearinput();
+            }
+            else {
+            document.getElementById("content").innerHTML =
+            "You're right on the money!" ;
+            }
+}
+document.getElementById("your_guesses").innerHTML = "You have guessed: " +
+guessArray;
+
+}
+
+
+</script>
+
+
 </body>
 
-<script src="guess.js"></script>
 </html>
+
+
+
+<body>

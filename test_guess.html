@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+<title>Guessing Game Mini Project- Code the Dream 2018</title>
+</head>
+<body>
+<h1>Guessing Game</h1>
+
+<h3>Select a random number greater than 1. The game will indictate you if the guessed number is too high or too low.
+You have 5 guesses. Go!</h3>
+
+<script>
+
+var guess= prompt("Enter your guess");
+document.write(guess);
+var rightAnswer=Math.floor(Math.random())+1;
+
+function userGuess() {
+
+if (guess === rightAnswer) {
+var guess;
+document.write("You are correct!, the number is" + guess);
+} else if (guess > rightAnswer) {
+document.write("You're guessing too high!, you have guessed" + guess+ " times already!");
+} else {
+document.write("You're guessing too low!, you have guessed" + guess+ " times already!");
+}
+}
+return userGuess();
+
+</script>
+</body>
+</html>
