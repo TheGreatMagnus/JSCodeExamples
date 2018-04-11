@@ -14,12 +14,12 @@
 
 
 function jadenCase(text) {
+  var text = document.getElementById('original').value;
     var newText = text.split(" ")
     .map(function(x){
       return x[0].toUpperCase() + x.slice(1);
     })
     .join(" ");
-    console.log(newText);
-};
 
-jadenCase("How can mirrors be real if our eyes aren't real?")
+    document.getElementById("editedText").innerHTML = newText;
+};
