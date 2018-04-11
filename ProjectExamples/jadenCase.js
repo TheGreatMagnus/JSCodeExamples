@@ -13,13 +13,16 @@
 
 
 
+
 function jadenCase(text) {
   var text = document.getElementById('original').value;
-    var newText = text.split(" ")
-    .map(function(x){
+  //getting the text from the input field, set it equal to variable text
+
+    var newText = text.split(" ").map(function(x){
       return x[0].toUpperCase() + x.slice(1);
-    })
-    .join(" ");
+    }).join(" ");
 
     document.getElementById("editedText").innerHTML = newText;
 };
+
+  //create a variable newText  newText is equal to the result splitting the text into an array separated...
